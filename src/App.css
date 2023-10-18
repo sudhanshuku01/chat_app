@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* 
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Young Serif', serif; */
+/* user---------------------------------------- */
+@import url(./style/auth.css);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user:hover{
+   background: rgb(239, 231, 241);
+}
+.user img{
+  width: 40px;
+  border-radius: 20px;
+}
+.user-info h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+.user-info p{
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/* list----------------------------------------- */
+.list{
+    background: white;
+    padding: 0px 20px;
+    border: 1px solid grey;
+}
+/* .list-head{
+ 
+} */
+.list-head{
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin: 8px;
+}
+.list-head> p{
+  font-size: 19px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 4px 7px;
+  color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.list-content{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+/* home and header------------------------------------------ */
+.header{
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ height: 40px;
+  padding: 0px 5px;
+  background: #a6ffe1;
+}
+.header img{
+  width: 35px;
+  border-radius: 20px;
+
+}
+.home{
+  display: grid;
+  grid-template-columns: 1fr 8fr 16fr;
+}
+.home-sidebar{
+  background: #a6ffe1;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* chat------------------------ */
+.chat{
+  background-color: aliceblue;
+}
+.chat-box{
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.chat-profileinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 20px;
+    background: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.chat-profileinfo>div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.chat-profileinfo>div img{
+  width: 40px;
+  
+}
+.chat-profileinfo>div p{
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.chat-profileinfo>img{
+  width: 22px;
+  cursor: pointer;
+}
+.chat-message{
+  width: fit-content;
+  background: #ffffff;
+  padding: 5px 10px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  max-width: 50%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.chat-message p:first-child{
+  display: flex;
+  justify-content: space-between;
+  font-family:sans-serif;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-message p:first-child span:last-child{
+  font-family: math;
+  font-weight: 100;
+  font-size: 12px;
+}
+.chat-message p:last-child{
+  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.left{
+  float: left;
+  clear: both;
+}
+.right{
+  float: right;
+  clear: both;
+}
+.middle{
+  margin: 5px auto;
+  clear: both;
+  background-color: #e3d2de;
+}
+
+/* message----------------------------- */
+
+.message{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+.message input{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border: none;
+  font-size: 16px;
+  padding: 8px 20px;
+  width: -webkit-fill-available;
+  outline: none;
+  border-top: 1px solid grey;
+}
+.message img{
+  width: 24px;
+  margin: 0px 10px;
+  cursor: pointer;
 }
